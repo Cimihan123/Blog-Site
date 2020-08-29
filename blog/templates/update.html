@@ -1,0 +1,15 @@
+{% load crispy_forms_tags %}
+
+<div class="container">
+
+<form method="post" class="bootstrap4" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{Pform.media}}
+  
+    {{ Pform|crispy }}
+
+    <input class="btn btn-primary" type="submit" value="submit">
+</form>
+
+
+</div>
