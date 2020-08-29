@@ -51,7 +51,7 @@ def listBlog(request):
     poste = f.qs
  
 
-    paginator = Paginator(poste, 4) # Show 25 contacts per page.
+    paginator = Paginator(poste, 4) # Show 4 per page.
 
     page = request.GET.get('page')
    
