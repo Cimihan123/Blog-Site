@@ -2,6 +2,7 @@ from django.urls import path
 
 from . import views
  
+app_name = 'blog' # good pattern to have a blog name.
  
 urlpatterns =[
      
@@ -11,8 +12,8 @@ urlpatterns =[
 
      #CRUD
      path('create-post/', views.createPost, name='create'),
-     path('update-post/<str:pk>', views.updatePost, name='update'),
-     path('delete/<str:pk>', views.deletePost, name='delete')
+     path('update-post/<int:pk>', views.updatePost, name='update'),
+     path('delete/<int:pk>', views.deletePost, name='delete')
 
 
  ]
