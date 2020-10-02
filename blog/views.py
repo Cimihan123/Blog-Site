@@ -85,7 +85,7 @@ def detailBlog(request,pk):
     recent_posts = Post.objects.order_by('-date')[:5]
     post = Post.objects.get(pk=pk)
     comment = Comment.objects.filter(post=post)
-    posts = Post.objects.all()
+    
   
 
 
